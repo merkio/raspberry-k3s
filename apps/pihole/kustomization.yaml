@@ -1,4 +1,6 @@
 resources:
   - pv.yaml
   - pvc.yaml
-  - statefulset.yaml
+  - deployment.yml
+  - configmap-pihole.yml
+  - service.yml

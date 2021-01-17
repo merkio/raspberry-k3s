@@ -4,18 +4,18 @@ metadata:
   name: pihole-pv
 spec:
   capacity:
-    storage: 3Gi
+    storage: 500Mi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   storageClassName: local-storage
   local:
-    path: /media/storage/pihole/etc
+    path: /media/storage/pihole/etc-pihole
   nodeAffinity:
     required:
       nodeSelectorTerms:
         - matchExpressions:
-            - key: app
+            - key: kubernetes.io/hostname
               operator: In
               values:
-                - pihole
+                - pi
