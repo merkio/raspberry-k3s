@@ -1,5 +1,4 @@
 resources:
-  - ../apps/pihole/ingress.yaml
-  - ../apps/pihole/tcp-cm.yaml
-  - ../apps/pihole/udp-cm.yaml
-namespace: ingress-nginx
+  - tcp-cm.yaml
+  - udp-cm.yaml
+  - ingress.yaml

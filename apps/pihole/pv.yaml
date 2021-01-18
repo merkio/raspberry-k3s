@@ -2,20 +2,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: pihole-pv
+  labels:
+    type: local
 spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-path
   capacity:
     storage: 500Mi
   volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: local-storage
-  local:
+  hostPath:
     path: /media/storage/pihole/etc-pihole
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-                - pi

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tcp-services
+  namespace: ingress-nginx
+data:
+  8089: "apps/pihole-tcp:8089"
+  53: "apps/pihole-tcp:53"

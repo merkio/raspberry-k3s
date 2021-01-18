@@ -30,7 +30,7 @@ spec:
         name: pihole
         ports:
         - containerPort: 80
-          name: pihole-http
+          name: pihole
           protocol: TCP
         - containerPort: 53
           name: dns

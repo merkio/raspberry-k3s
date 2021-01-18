@@ -3,4 +3,5 @@ resources:
   - pvc.yaml
   - deployment.yml
   - configmap-pihole.yml
-  - service.yml
+  - service-udp.yml
+  - service-tcp.yml
