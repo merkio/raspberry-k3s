@@ -1,3 +1,4 @@
 resources:
   - pihole
+  - bitwarden
 namespace: apps
