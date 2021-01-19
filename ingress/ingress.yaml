@@ -405,6 +405,9 @@ spec:
             - name: dns-udp
               containerPort: 53
               protocol: UDP
+            - name: postgres
+              containerPort: 5432
+              protocol: TCP
           volumeMounts:
             - name: webhook-cert
               mountPath: /usr/local/certificates/
