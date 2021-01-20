@@ -5,8 +5,23 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+    - hosts:
+      - bitwarden.home.net
+      - home-bitwarden.dynv6.net
+      secretName: bitwarden-tls
   rules:
     - host: bitwarden.home.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: bitwarden-svc
+                port:
+                  number: 80
+    - host: home-bitwarden.dynv6.net
       http:
         paths:
           - path: /
