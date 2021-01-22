@@ -5,3 +5,4 @@ resources:
   - configmap-pihole.yml
   - service-udp.yml
   - service-tcp.yml
+namespace: apps

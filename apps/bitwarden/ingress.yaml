@@ -4,12 +4,13 @@ metadata:
   name: bitwarden-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: selfsigned
 spec:
   tls:
     - hosts:
       - bitwarden.home.net
       - home-bitwarden.dynv6.net
-      secretName: bitwarden-tls
+      secretName: bitwarden-tls-cert
   rules:
     - host: bitwarden.home.net
       http:

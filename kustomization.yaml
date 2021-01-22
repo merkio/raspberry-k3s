@@ -2,3 +2,4 @@ resources:
   - apps
   - dbs
   - ingress
+  - certs
