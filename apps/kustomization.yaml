@@ -1,4 +1,5 @@
 resources:
   - pihole
   - bitwarden
+  - nextcloud
 namespace: apps

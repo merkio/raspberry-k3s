@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextcloud
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: nextcloud
+  template:
+    metadata:
+      labels:
+        app: nextcloud
+    spec:
+      containers:
+        - name: nextcloud
+          image: nextcloud
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 80
+          env:
+            - name: OVERWRITEPROTOCOL
+              value: https
+          volumeMounts:
+            - mountPath: /var/www/html
+              name: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: nextcloud-pvc
