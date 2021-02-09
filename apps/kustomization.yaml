@@ -2,4 +2,5 @@ resources:
   - pihole
   - bitwarden
   - nextcloud
+  - gym_app
 namespace: apps

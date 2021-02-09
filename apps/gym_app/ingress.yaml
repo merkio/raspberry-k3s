@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gym-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: selfsigned
+spec:
+  tls:
+    - hosts:
+      - gym-app.home.net
+      - home-gym-app.dynv6.net
+      secretName: gym-app-tls-cert
+  rules:
+    - host: gym-app.home.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gym-app-svc
+                port:
+                  number: 8080
+    - host: home-gym-app.dynv6.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gym-app-svc
+                port:
+                  number: 8080
