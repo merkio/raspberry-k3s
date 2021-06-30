@@ -1,0 +1,2 @@
+resources:
+  - postgresql-backup-cron-job.yaml
