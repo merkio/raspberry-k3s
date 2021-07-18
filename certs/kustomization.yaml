@@ -1,4 +1,3 @@
 resources:
   - cert-manager
   - selfsigned-issuer.yaml
-  - ca_certificate.yaml

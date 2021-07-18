@@ -2,4 +2,3 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-  - gym-app_certificate.yaml

@@ -8,11 +8,11 @@ metadata:
 spec:
   tls:
     - hosts:
-      - bitwarden.home.net
+      - bitwarden.home.local
       - home-bitwarden.dynv6.net
-      secretName: bitwarden-cert
+      secretName: bitwarden-tls-cert
   rules:
-    - host: bitwarden.home.net
+    - host: bitwarden.home.local
       http:
         paths:
           - path: /
