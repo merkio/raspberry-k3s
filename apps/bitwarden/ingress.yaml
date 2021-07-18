@@ -10,7 +10,7 @@ spec:
     - hosts:
       - bitwarden.home.net
       - home-bitwarden.dynv6.net
-      secretName: bitwarden-tls-cert
+      secretName: bitwarden-cert
   rules:
     - host: bitwarden.home.net
       http:

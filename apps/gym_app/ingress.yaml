@@ -10,7 +10,7 @@ spec:
     - hosts:
       - gym-app.home.net
       - home-gym-app.dynv6.net
-      secretName: gym-app-tls-cert
+      secretName: gym-app-cert
   rules:
     - host: gym-app.home.net
       http:

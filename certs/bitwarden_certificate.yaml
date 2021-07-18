@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: selfsigned-crt
+spec:
+  secretName: bitwarden-cert
+  duration: 170000h
+  renewBefore: 72h
+  issuerRef:
+    kind: Issuer
+    name: selfsigned
+  commonName: "bitwarden.home.net"
+  isCA: true
+  dnsNames:
+    - "bitwarden.home.net"
+    - "home-bitwarden.dynv6.net"
