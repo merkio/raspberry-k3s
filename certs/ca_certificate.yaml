@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ca-crt
+spec:
+  secretName: ca-cert
+  issuerRef:
+    name: selfsigned
+  commonName: "home.net"
+  usages:
+    - server auth
+    - client auth
+  isCA: true
