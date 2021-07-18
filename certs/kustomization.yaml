@@ -1,6 +1,4 @@
 resources:
   - cert-manager
   - selfsigned-issuer.yaml
-  - bitwarden_certificate.yaml
-  - gym-app_certificate.yaml
   - ca_certificate.yaml
