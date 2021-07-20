@@ -9,11 +9,11 @@ metadata:
 spec:
   tls:
     - hosts:
-      - nextcloud.home.local
+      - nextcloud.home.net
       - home-nextcloud.dynv6.net
       secretName: nextcloud-tls-cert
   rules:
-    - host: nextcloud.home.local
+    - host: nextcloud.home.net
       http:
         paths:
           - path: /

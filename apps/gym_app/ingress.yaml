@@ -8,11 +8,11 @@ metadata:
 spec:
   tls:
     - hosts:
-      - gym-app.home.local
+      - gym-app.home.net
       - home-gym-app.dynv6.net
       secretName: gym-app-tls-cert
   rules:
-    - host: gym-app.home.local
+    - host: gym-app.home.net
       http:
         paths:
           - path: /
