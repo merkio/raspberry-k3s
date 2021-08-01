@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: gym-app
-          image: "geekspace/gym-app:v0.0.10"
+          image: "geekspace/gym-app:v0.0.12"
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080
